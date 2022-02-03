@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILE=~/pokeapp/pokedex.csv
+
+s() {
+	sed -i '/Galarian/d' $FILE | sed '1 d' | sed -i '/Alolan/d' $FILE | sed -i '/Partner/d' $FILE | grep -v "Mega" $FILE | cut -d "," -f 3 | head -151 
+}
+
+$1
