@@ -15,7 +15,7 @@ uninstall() {
 test() {
 	echo "Testing ..."
 	./pokeapp num Grass > numGrass.actual
-	cmp numGrass.actual numGrass.expected || "numGrass test failed"
+	cmp numGrass.actual numGrass.expected || echo "numGrass test failed"
 }
 
 "$@"
