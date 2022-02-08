@@ -1,0 +1,12 @@
+#!/bin/bash
+
+Json(){
+	echo "enter url "
+	read url
+	echo "enter json file name "
+	read name
+	curl $url > $name.json
+
+}
+
+"$@"
